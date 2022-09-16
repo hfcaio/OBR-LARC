@@ -1,5 +1,4 @@
-#include<bits/stdc++.h>
-#include<iostream>
+#include<vector>
 using namespace std;
 
 #define sharp_FR 1
@@ -46,8 +45,8 @@ class Graph {
 			n_conections++;
 		}
 		
-		vector<string> path_creator(vertex start, vector<vertex> path) {
-			vector<string> ans;
+		vector<String> path_creator(vertex start, vector<vertex> path) {
+			vector<String> ans;
 			for (int i = 0; i < path.size(); i++) {
 				if (start.position[0] - path[i].position[0] > 0) ans.push_back("UP");
 				else if (start.position[0] - path[i].position[0] < 0) ans.push_back("DOWN");
@@ -58,7 +57,7 @@ class Graph {
 			return ans;
 		}
 
-		vector<string> bfs(vertex start, vertex end) { //breath first search
+		vector<String> bfs(vertex start, vertex end) { //breath first search
 			clean_path();
 			vector<vertex> list; //create a queue
 			list.push_back(start); //push start into the queue
